@@ -1,14 +1,20 @@
-#include<stdio.h>
-int main()
-{
-	int n;
-	scanf("%d",&n);
-	int a[n],i;
-	for(i=0;i<n;i++)
-		scanf("%d",&a[i]);
-	for(i=0;i<n;i++)
-		if(a[0]>a[i])
-			a[0]=a[i];
-	printf("smalest %d",a[0]);
-	return 0;
+#include <stdio.h>
+int main() {
+   int a[]={2,5,3,1,2};
+   int c;
+     for(int i=0;i<5;i++)
+   {
+       for(int j=0;j<i;j++)
+       {
+       if(a[j]>a[i])
+       {
+       c=a[j];
+       a[j]=a[i];
+       a[i]=c;
+       }
+   }
+   }
+   printf("Second largest is %d \n",a[3]);
+   
+    return 0;
 }
