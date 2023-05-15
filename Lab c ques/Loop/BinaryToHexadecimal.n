@@ -1,0 +1,70 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    long long binaryNum, hexadecimalNum = 0;
+    int digit, position = 0;
+
+    printf("Enter a binary number: ");
+    scanf("%lld", &binaryNum);
+
+    // Convert binary to hexadecimal
+    while (binaryNum != 0) {
+        digit = binaryNum % 10000;
+        switch (digit) {
+            case 0:
+                hexadecimalNum += 0 * pow(16, position);
+                break;
+            case 1:
+                hexadecimalNum += 1 * pow(16, position);
+                break;
+            case 10:
+                hexadecimalNum += 2 * pow(16, position);
+                break;
+            case 11:
+                hexadecimalNum += 3 * pow(16, position);
+                break;
+            case 100:
+                hexadecimalNum += 4 * pow(16, position);
+                break;
+            case 101:
+                hexadecimalNum += 5 * pow(16, position);
+                break;
+            case 110:
+                hexadecimalNum += 6 * pow(16, position);
+                break;
+            case 111:
+                hexadecimalNum += 7 * pow(16, position);
+                break;
+            case 1000:
+                hexadecimalNum += 8 * pow(16, position);
+                break;
+            case 1001:
+                hexadecimalNum += 9 * pow(16, position);
+                break;
+            case 1010:
+                hexadecimalNum += 10 * pow(16, position);
+                break;
+            case 1011:
+                hexadecimalNum += 11 * pow(16, position);
+                break;
+            case 1100:
+                hexadecimalNum += 12 * pow(16, position);
+                break;
+            case 1101:
+                hexadecimalNum += 13 * pow(16, position);
+                break;
+            case 1110:
+                hexadecimalNum += 14 * pow(16, position);
+                break;
+            case 1111:
+                hexadecimalNum += 15 * pow(16, position);
+                break;
+        }
+        binaryNum /= 10000;
+   position++;
+}    
+printf("Hexadecimal number: %lld\n", hexadecimalNum);
+
+return 0;
+}
