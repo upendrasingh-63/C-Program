@@ -29,4 +29,7 @@ int main() {
         if (result == i) {
             printf("%d ", i);
         }
-   
+   }
+
+return 0;
+}
